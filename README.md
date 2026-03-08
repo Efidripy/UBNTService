@@ -26,10 +26,18 @@ sudo curl -fsSL https://raw.githubusercontent.com/Efidripy/UBNTService/main/full
 
 Удаляет кэш, старые пакеты и системный мусор.
 
+Просмотр:
 ```bash
 sudo curl -fsSL https://raw.githubusercontent.com/Efidripy/UBNTService/main/full_clean.sh | bash
 ```
-
+Очистка:
+```bash
+sudo curl -fsSL https://raw.githubusercontent.com/Efidripy/UBNTService/main/full_clean.sh | sudo bash -s -- --apply
+```
+Очистка с firmware:
+```bash
+sudo curl -fsSL https://raw.githubusercontent.com/Efidripy/UBNTService/main/full_clean.sh | sudo bash -s -- --purge-firmware --apply
+```
 ---
 
 ### ⚙️ Менеджер сервисов Ubuntu
