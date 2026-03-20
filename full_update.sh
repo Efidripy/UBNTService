@@ -53,7 +53,7 @@ if command -v snap >/dev/null 2>&1; then
   # (officially common cleanup snippet)
   snap list --all 2>/dev/null | awk '/disabled/{print $1, $3}' | while read -r snapname revision; do
     snap remove "$snapname" --revision="$revision" || true
-  done
+  done || true
 fi
 
 log "Firmware: skip on virtualized VPS, otherwise try (optional)"
